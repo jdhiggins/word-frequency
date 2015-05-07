@@ -59,7 +59,11 @@ def sort_words(a_dict):
     else:
         divisor = 1
     for word in top_20:
-        print(word[0]+ " " +(int(word[1]/divisor) * "#"))
+        word_length = len(word[0])
+        print(word_length)
+        spaces = 20 - word_length
+        print(spaces)
+        print(word[0]+ (" " * spaces)+ ">  " +(int(word[1]/divisor) * "#"))
 
 if __name__ == "__main__":
     all_text = get_text("sample.txt")
